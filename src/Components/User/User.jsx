@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const User = ({ user }) => {
   const { id, name, username, email, phone, website } = user;
   return (
-    <div className="border-red-600 border rounded-xl p-3 my-5 text-center bg-sky-200 shadow-lg ">
+    <div className="border-red-600 border rounded-xl p-3 text-center bg-sky-200 shadow-lg ">
       <h2 className="font-bold">{username}</h2>
       <div className="text-left">
         <h3>Name : {name}</h3>
@@ -22,6 +22,13 @@ const User = ({ user }) => {
 };
 
 export default User;
-User.PropTypes = {
-  user: PropTypes.object.isRequired,
+User.propTypes = {
+  user: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    phone: PropTypes.string.isRequired,
+    website: PropTypes.string.isRequired,
+  }).isRequired,
 };

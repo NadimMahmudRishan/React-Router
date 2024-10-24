@@ -5,9 +5,9 @@ import "./index.css";
 import Home from "./Components/Home";
 import EditProfile from "./Profile/EditProfile";
 import ViewProfile from "./Profile/ViewProfile";
-import Contract from "./Components/Contract";
 import Users from "./Components/Users";
 import UserDetails from "./Components/UserDetails/UserDetails";
+import Posts from "./Components/Posts/Posts";
 
 const router = createBrowserRouter([
   {
@@ -28,8 +28,9 @@ const router = createBrowserRouter([
         element: <ViewProfile></ViewProfile>,
       },
       {
-        path: "/Contract",
-        element: <Contract></Contract>,
+        path: "/Posts",
+        loader: () => fetch("https://jsonplaceholder.typicode.com/posts"),
+        element: <Posts></Posts>,
       },
       {
         path: "/ViewProfile",

@@ -40,11 +40,11 @@ const Nav = () => {
                 </ul>
               </li>
               <li>
-                <Link to="/Contract">Contract</Link>
+                <Link to="/Posts">Posts</Link>
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">Home</a>
+          <a href="/" className="btn btn-ghost text-xl">Home</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -65,7 +65,7 @@ const Nav = () => {
               </details>
             </li>
             <li>
-              <Link to="/Contract">Contract</Link>
+              <Link to="/Posts">Posts</Link>
             </li>
           </ul>
         </div>
